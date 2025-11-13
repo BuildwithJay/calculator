@@ -1,0 +1,94 @@
+/* Center calculator on screen */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Calculator container */
+#calculator {
+  background-color: #1e1e1e;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+/* Display screen */
+#display {
+  width: 100%;
+  padding: 20px;
+  font-size: 2.5rem;
+  text-align: right;
+  border: none;
+  background-color: #2b2b2b;
+  color: #ffffff;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Keys layout container */
+#keys-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* 3:1 ratio between number pad and operators */
+  background-color: #1e1e1e;
+}
+
+/* Number grid */
+#number-keys {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Operator buttons stacked vertically */
+#operator-keys {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 20px 10px 20px 0;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+/* General button styling */
+button {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 18px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2563eb;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Operator buttons */
+.operator-button {
+  background-color: #f97316;
+}
+
+.operator-button:hover {
+  background-color: #fb923c;
+}
